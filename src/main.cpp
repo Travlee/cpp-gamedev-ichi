@@ -3,6 +3,21 @@
 
 int main()
 {
-        std::cout << "hello" << std::endl;
+        SetConfigFlags(FLAG_WINDOW_RESIZABLE);
+
+        InitWindow(800, 450, "Ichi");
+
+        while(!WindowShouldClose()){
+                BeginDrawing();
+
+                ClearBackground(RAYWHITE);
+
+                DrawText("Ichi text", 190, 200, 20, RED);
+
+                EndDrawing();
+        }
+
+        CloseWindow();
+
         return 0;
 }
